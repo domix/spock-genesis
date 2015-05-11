@@ -1,0 +1,18 @@
+sudo: false
+
+cache:
+  directories:
+  - $HOME/.gradle
+
+language: groovy
+
+jdk:
+- oraclejdk7
+- oraclejdk8
+- openjdk7
+
+env:
+- TERM=dumb
+
+script:
+- ./gradlew clean build
